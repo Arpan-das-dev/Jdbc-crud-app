@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDao {
-
+// create 
     public void addStudent(Students students) {
         try {
             Connection conn = DbConnection.getConnection();
@@ -25,6 +25,7 @@ public class StudentDao {
             e.printStackTrace();
         }
     }
+    //Read
 
     public List<Students> getAllStudents() {
         List<Students> studentsList = new ArrayList<>();
@@ -47,6 +48,7 @@ public class StudentDao {
         }
         return studentsList;
     }
+    
 
     public int updateStudents(Students students) {
         String sql = "UPDATE students SET name = ?, age = ?, email = ? WHERE id = ?";
